@@ -16,6 +16,10 @@ module.exports = _.chain(config)
                 {test: /\.json$/, use: 'json-loader'},
                 {test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/},
                 {
+                    test: /\.png$/i,
+                    type: 'asset/resource'
+                },
+                {
                     test: /\.(scss|css)$/,
                     use: [
                         'style-loader',
